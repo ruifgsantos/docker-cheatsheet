@@ -53,4 +53,4 @@ Create a custom docker image from a custom Dockerfile. To tag the image with cor
 ```
 docker exec -it <container-name | container-id> <COMMAND>
 ```
-Execute commands inside Docker image from the host machine. The flags ```-it``` correspond respectively to **I**nteractive **T**erminal allowing to create a shell to run commands.
+Execute commands inside Docker image from the host machine. The flags ```-it``` correspond respectively to **I**nteractive **T**erminal allowing to create a shell to run commands. Usually this is widely adopted to navigate through the files inside the container using *bash* console, like so ```docker exec -it <container-name> bash```.
