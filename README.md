@@ -50,3 +50,7 @@ docker build <path-to-dockerfile>
 Create a custom docker image from a custom Dockerfile. To tag the image with correct name, flag ```-t```needs to added like so ```docker build -t my-custom-image:1.0 ./path-to-Dockerfile```
 </br>
 </br>
+```
+docker exec -it <container-name | container-id> <COMMAND>
+```
+Execute commands inside Docker image from the host machine. The flags ```-it``` correspond respectively to **I**nteractive **T**erminal allowing to create a shell to run commands.
