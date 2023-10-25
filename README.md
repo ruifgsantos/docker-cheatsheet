@@ -98,3 +98,21 @@ Configures the command to be executed when the container starts.
 FROM <docker-image>
 ```
 Initializes the base image to be used in the build process and execution of following instruction.
+</br>
+</br>
+```
+ENV <key> <valyue>
+```
+Sets environment variables to used inside the container.
+</br>
+</br>
+```
+VOLUME <directory>
+```
+Creates a mount point to be used with another directory in host machine.
+</br>
+</br>
+```
+ARG <key>=<value>
+```
+Arguments to be used when in build phase of the image. These become required and will triggers warn messages when not supplied.
