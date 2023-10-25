@@ -17,6 +17,18 @@ Presents a list of running containers. If desired to list all containers (includ
 </br>
 </br>
 ```
+docker image ls
+```
+Presents a list of images in local machine.
+</br>
+</br>
+```
+docker volume ls
+```
+Presents a list of docker volumes.
+</br>
+</br>
+```
 docker rm <container-name | container-id>
 ```
 Removes the docker container. If container is in running state you can force the removal by appending the flag ```-f```.
