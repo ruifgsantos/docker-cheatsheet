@@ -1,6 +1,8 @@
 # docker-cheatsheet
 
-This file will list a few of the most used commands to interact with Docker CLI.
+## This file will list a few of the most used commands to interact with Docker CLI and Dockerfile.
+
+### Docker CLI
 
 ```
 docker run
@@ -54,3 +56,45 @@ Create a custom docker image from a custom Dockerfile. To tag the image with cor
 docker exec -it <container-name | container-id> <COMMAND>
 ```
 Execute commands inside Docker image from the host machine. The flags ```-it``` correspond respectively to **I**nteractive **T**erminal allowing to create a shell to run commands. Usually this is widely adopted to navigate through the files inside the container using *bash* console, like so ```docker exec -it <container-name> bash```.
+</br>
+</br>
+```
+docker inspect <container-name | container-image | container-volume>
+```
+
+### Dockerfile instructions
+
+```
+ADD <source> <destination>
+```
+Allows to move files from one host destination or remote to a docker container destination.
+</br>
+</br>
+```
+COPY <source> <destination>
+```
+Similar to ADD instruction, but only accepts source files from host machine.
+</br>
+</br>
+```
+RUN <instruction>
+```
+Runs command instructions and creates docker layers for caching purposes.
+</br>
+</br>
+```
+CMD <instruction>
+```
+Sets the command to be executed when the Docker container starts. Can be overrided by ```docker run```parameterization.
+</br>
+</br>
+```
+ENTRYPOINT <instruction>
+```
+Configures the command to be executed when the container starts.
+</br>
+</br>
+```
+FROM <docker-image>
+```
+Initializes the base image to be used in the build process and execution of following instruction.
