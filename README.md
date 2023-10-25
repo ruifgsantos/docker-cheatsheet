@@ -116,3 +116,9 @@ Creates a mount point to be used with another directory in host machine.
 ARG <key>=<value>
 ```
 Arguments to be used when in build phase of the image. These become required and will triggers warn messages when not supplied.
+</br>
+</br>
+```
+WORKDIR <directory>
+```
+Sets the working directory for the following commands like ```RUN``` ```CMD```.
